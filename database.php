@@ -3,12 +3,9 @@ class database{
     public function __construct()
     {
         try{
-            $serverName = 'localhost';
-            $userName = 'root';
-            $password = '';
-            $dbName = 'laundry';
-            $this-> pdo = new PDO("mysql:host=$serverName;port=3306;dbname=$dbName",$userName, $password);
-            $this-> pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $con = mysqli_init();
+            mysqli_ssl_set($con,NULL,NULL, NULL, NULL, NULL);
+            mysqli_real_connect($conn, "laundry-server.mysql.database.azure.com", "cqjdjtepql", "Patraerix26.", "laundry", 3306,;
         }
         catch(PDOException $e){
             echo 'Error, dikarenakan ' . $e ->getMessage();
