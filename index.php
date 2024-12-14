@@ -44,7 +44,7 @@
                 <br>
                 <h1><a class="text-light bg-dark">Solusi cuci setiap hari</a></h1>
                 <br>
-                <h6><a class="btn btn-primary btn-lg" href="/signup.php" role="button">Daftar Sekarang</a></h6>
+                <h6><a class="btn btn-primary btn-lg" href="signup.php" role="button">Daftar Sekarang</a></h6>
                 <br><br><br><br><br>
             </div>
             <div class="carousel-item">
