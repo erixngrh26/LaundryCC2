@@ -34,16 +34,6 @@ jobs:
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
 
-      - name: Set Environment Variables
-        run: |
-          echo "DB_CONNECTION=mysql" >> $GITHUB_ENV
-          echo "DB_HOST=${{ secrets.DB_HOST }}" >> $GITHUB_ENV
-          echo "DB_PORT=3306" >> $GITHUB_ENV
-          echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> $GITHUB_ENV
-          echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> $GITHUB_ENV
-          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> $GITHUB_ENV
-
-
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
@@ -71,9 +61,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2393285022914B249269844F211D46F9 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_45BD7F7FE418435787152263184E8EA8 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_04A843EC8A68440281435B7A2DC127C0 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FEC7F9B5D1784FD9B3C01BEC8B1DE7B6 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E6702DD37EC24FD6A416C560559928DA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9768DB2BEF614DB78E99B4ABCF91A719 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
